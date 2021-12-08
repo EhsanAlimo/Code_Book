@@ -2,7 +2,7 @@ import React from "react";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useContextProvider } from "../../context/StateProvider";
-import SyntaxHighlighter from "react-syntax-highlighter";
+// import SyntaxHighlighter from "react-syntax-highlighter";
 // import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 // import js from "react-syntax-highlighter/dist/cjs/languages/hljs/javascript";
 // SyntaxHighlighter.registerLanguage("javascript", js);
@@ -73,14 +73,14 @@ function CodeBox({
       <div className="border min-h-[300px] p-2">
         {/* <p className="">{codeValue}</p> */}
         {/* <pre class="language-javascript"> */}
-        {/* <code>{codeValue}</code> */}
+        <code>{codeValue}</code>
         {/* </pre> */}
-        <SyntaxHighlighter
+        {/* <SyntaxHighlighter
           language="javascript"
           className="h-[300px] overflow-scroll"
         >
           {codeValue}
-        </SyntaxHighlighter>
+        </SyntaxHighlighter> */}
       </div>
       <div className="p-2 flex justify-between items-center">
         <button onClick={deleteHandler}>Delete</button>
