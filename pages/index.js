@@ -1,5 +1,4 @@
 import Head from "next/head";
-import CodeStore from "./CodeStore";
 import Login from "./components/login/Login";
 import Navbar from "./components/Navbar";
 

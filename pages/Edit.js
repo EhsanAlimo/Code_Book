@@ -1,8 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { doc, updateDoc, serverTimestamp } from "firebase/firestore";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import React from "react";
-import Navbar from "./components/Navbar";
+
 import { useContextProvider } from "../context/StateProvider";
 import { db } from "../firebase";
 

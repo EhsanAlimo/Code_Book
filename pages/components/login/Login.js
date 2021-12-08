@@ -1,19 +1,12 @@
-import { signIn, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import React, { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import {
-  doc,
-  setDoc,
-  addDoc,
-  collection,
-  serverTimestamp,
-} from "firebase/firestore";
-import { db, storage } from "../../../firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "../../../firebase";
 
 function Login() {
   const { data: session } = useSession();
   //   console.log(session);
-  const [loading, setLoading] = useState(false);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
   const codeRef = useRef(null);

@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { doc, updateDoc, deleteField, deleteDoc } from "firebase/firestore";
+import React from "react";
+import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useContextProvider } from "../../context/StateProvider";
 import SyntaxHighlighter from "react-syntax-highlighter";

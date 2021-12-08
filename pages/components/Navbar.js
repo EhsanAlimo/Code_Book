@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
-import signIn from "../auth/signin";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
 function Navbar() {
