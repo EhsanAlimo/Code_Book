@@ -11,13 +11,13 @@ function signIn({ providers }) {
         <img src="/image/codeLogo.jpeg" alt="" className="w-80 rounded-2xl" />
         <div className="mt-40">
           {/* https://next-auth.js.org/configuration/pages#sign-in-page    //// code comes from */}
+          <p className="italic font-medium text-black">
+            Please Sign In in my web application to be able to upload, save,
+            delete and edit your usefull codes and have your own CodeBook
+            account.{" "}
+          </p>
           {Object.values(providers).map((provider) => (
             <div key={provider.name}>
-              <p className="italic font-medium text-black">
-                Please Sign In in my web application to be able to upload, save,
-                delete and edit your usefull codes and have your own CodeBook
-                account.{" "}
-              </p>
               <button
                 className="p-3 bg-blue-500 rounded-lg text-white mt-10"
                 onClick={() =>
