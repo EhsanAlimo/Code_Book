@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { doc, updateDoc, deleteField, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { useContextProvider } from "../context/StateProvider";
+import { useContextProvider } from "../../context/StateProvider";
 import SyntaxHighlighter from "react-syntax-highlighter";
 // import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 // import js from "react-syntax-highlighter/dist/cjs/languages/hljs/javascript";

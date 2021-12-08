@@ -3,7 +3,7 @@ import { doc, updateDoc, serverTimestamp } from "firebase/firestore";
 import { Fragment, useEffect, useRef, useState } from "react";
 import React from "react";
 import Navbar from "./components/Navbar";
-import { useContextProvider } from "./context/StateProvider";
+import { useContextProvider } from "../context/StateProvider";
 import { db } from "../firebase";
 
 function Edit() {

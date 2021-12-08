@@ -1,7 +1,7 @@
 import "tailwindcss/tailwind.css";
 import { SessionProvider } from "next-auth/react";
-import { StateProvider } from "./context/StateProvider";
-import { initialState, reducer } from "./context/reducer";
+import { StateProvider } from "../context/StateProvider";
+import { initialState, reducer } from "../context/reducer";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
