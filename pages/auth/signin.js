@@ -1,13 +1,9 @@
-import {
-  getProviders,
-  signIn as SignIntoProvider,
-  useSession,
-} from "next-auth/react";
+import { getProviders, signIn as SignIntoProvider } from "next-auth/react";
 import Navbar from "../components/Navbar";
 ///Browser
 function signIn({ providers }) {
-  const { data: session } = useSession();
-  console.log(session);
+  // const { data: session } = useSession();
+  // console.log(session);
   return (
     <>
       <Navbar />
