@@ -1,29 +1,31 @@
-# Next.js + Tailwind CSS Example
+# Code Book
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+is a web application to satisfy my own needs to save some of the codes I want to use later and having a quick access to them.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## Usage
 
-## Preview
+It is pretty simple web application which allows you to create, show, delete and update you codes in the code store. firstly you need to login and have fill out the form which contains Title, Description and Code inputs. all the created codes will go to you code store and you can have a access to them by clicking code store icon on the Navbar. [CodeBook](https://code-book.vercel.app/)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## CodeBox
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+In this project I have used Next.js, JavaScript, Tailwind CSS, Material UI, Firebase and some web-packages such as prism.
 
-## Deploy your own
+```javascript
+import { useContext, createContext, useReducer } from "react";
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+export const StateProviderContext = createContext("");
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+export const StateProvider = ({ initialState, reducer, children }) => (
+  <StateProviderContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateProviderContext.Provider>
+);
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+export const useContextProvider = () => useContext(StateProviderContext);
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Future improvements
+
+- Having a search functionality.
+- More login providers such as github and twitter.
+- Better responsive design.
