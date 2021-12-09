@@ -7,10 +7,10 @@ function Navbar() {
   const { data: session } = useSession();
   // console.log(session);
   return (
-    <div className="flex justify-between items-center w-screen bg-yellow-200 h-20 z-10 fixed top-0 bg-gradient-to-r from-gray-900 via-blue-700 to-purple-500 shadow-inner ">
+    <div className="flex justify-between items-center w-screen bg-yellow-200 h-20 z-10 fixed top-0 bg-gradient-to-r from-gray-900 via-blue-700 to-purple-500 shadow-inner sm:h-30">
       <div>
         <Link href="/">
-          <h2 className="m-5 text-4xl font-black bg-clip-text text-transparent bg-gradient-to-l from-purple-100 to-yellow-300 cursor-pointer">
+          <h2 className="m-5 text-lg md:text-4xl font-black bg-clip-text text-transparent bg-gradient-to-l from-purple-100 to-yellow-300 cursor-pointer hover:shadow-lg">
             CodeBook
           </h2>
         </Link>
@@ -18,7 +18,9 @@ function Navbar() {
       <div className="h-11 flex justify-center items-center">
         <div className="flex justify-between">
           {session ? (
-            <p>We are happy to see you here {session?.user.name}</p>
+            <p className="hidden sm:inline-block lg:text-white lg:font-bold">
+              We are happy to see you here {session?.user.name}
+            </p>
           ) : (
             ""
           )}
@@ -28,12 +30,14 @@ function Navbar() {
         {session ? (
           <>
             <Link href="/CodeStore">
-              <a>Code Store</a>
+              <a className="hidden sm:flex font-bold bg-clip-text text-transparent bg-gradient-to-l from-purple-100 to-yellow-300 hover:shadow-lg ">
+                Code Store
+              </a>
             </Link>
             <Link href="/CodeStore">
               <ArchiveOutlinedIcon className="cursor-pointer" />
             </Link>
-            <LogoutIcon onClick={signOut} className="cursor-pointer" />
+            <LogoutIcon onClick={signOut} className="cursor-pointer hidden" />
             <img
               onClick={signOut}
               src={session.user.image}

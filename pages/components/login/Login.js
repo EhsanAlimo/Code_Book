@@ -83,7 +83,7 @@ function Login() {
               required
             ></textarea>
             <button
-              className="hover:bg-yellow-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className="hover:bg-yellow-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 flex items-center justify-center w-30"
               onClick={uploadCode}
             >
               Submitt

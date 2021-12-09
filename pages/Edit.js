@@ -89,7 +89,7 @@ function Edit() {
                 onChange={(e) => setCode(e.target.value)}
               ></textarea>
               <button
-                className="hover:bg-yellow-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 w-1/2 items-center flex justify-center text-center"
+                className="hover:bg-yellow-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 items-center flex justify-center text-center "
                 onClick={saveHandler}
               >
                 Save
