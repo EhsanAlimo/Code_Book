@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useContextProvider } from "../../context/StateProvider";
-import SyntaxHighlighter from "react-syntax-highlighter";
+// import SyntaxHighlighter from "react-syntax-highlighter";
+import Prism from "prismjs";
 // import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 // import js from "react-syntax-highlighter/dist/cjs/languages/hljs/javascript";
 // SyntaxHighlighter.registerLanguage("javascript", js);
@@ -17,11 +18,9 @@ function CodeBox({
   profile,
 }) {
   //   console.log(tarikh);
-  //   useEffect(() => {
-  //     if (typeof window !== "undefined") {
-  //       prism.highlightAll();
-  //     }
-  //   }, []);
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   const [{ modalDisplay }, dispatch] = useContextProvider();
   const editHandler = () => {
@@ -48,7 +47,7 @@ function CodeBox({
   };
 
   return (
-    <div className="border w-full shadow-sm rounded-xl  bg-blue-300  ">
+    <div className="border w-full shadow-sm rounded-xl  bg-gradient-to-tr from-blue-600  via-yellow-300 to-red-500  ">
       <div className="flex space-x-2 p-2">
         <div className="flex justify-center items-center">
           {profile ? (
@@ -75,12 +74,14 @@ function CodeBox({
         {/* <pre class="language-javascript"> */}
         {/* <code>{codeValue}</code> */}
         {/* </pre> */}
-        <SyntaxHighlighter
+        {/* <SyntaxHighlighter
           language="javascript"
           className="h-[300px] overflow-scroll"
-        >
-          {codeValue}
-        </SyntaxHighlighter>
+        > */}
+        <pre className="h-[300px]">
+          <code className="language-javascript">{codeValue}</code>
+        </pre>
+        {/* </SyntaxHighlighter> */}
       </div>
       <div className="p-2 flex justify-between items-center">
         <button onClick={deleteHandler}>Delete</button>

@@ -21,7 +21,7 @@ function CodeStore({ docco }) {
   console.log(codes);
   //   console.log(codes[0].data().code);
   return (
-    <div className="pt-20 bg-gradient-to-l from-gray-900 via-blue-700 to-purple-500 ">
+    <div className="pt-20 bg-gray-900  ">
       <Navbar />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 m-2 lg:m-4">
         {codes?.map((c) => (

@@ -2,6 +2,8 @@ import "tailwindcss/tailwind.css";
 import { SessionProvider } from "next-auth/react";
 import { StateProvider } from "../context/StateProvider";
 import { initialState, reducer } from "../context/reducer";
+// import "../styles/global.scss";
+import "prismjs/themes/prism-tomorrow.css";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
