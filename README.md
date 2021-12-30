@@ -4,7 +4,7 @@ is a web application to satisfy my own needs to save some of the codes I want to
 
 ## Usage
 
-It is pretty simple web application which allows you to create, show, delete and update you codes in the code store. firstly you need to login and have fill out the form which contains Title, Description and Code inputs. all the created codes will go to you code store and you can have a access to them by clicking code store icon on the Navbar. [CodeBook](https://code-book.vercel.app/)
+It is pretty simple web application which allows you to create, show, delete and update your codes in the code store. firstly you need to login and fill out the form which contains Title, Description and Code inputs. After submition, the user can have access to all stored codes wich displayed by syntax highlighter on seperated boxes. Prism has been used for synatx highlighing to make better user experience in my web application. please click [CodeBook](https://code-book.vercel.app/) to see the web application.
 
 ## CodeBox
 
